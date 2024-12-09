@@ -1,6 +1,6 @@
 # Task management system
 
-Create a class called TaskManager to manage tasks in a to-do list. Each task will have a title, description, priority, and status.
+Create a class called Task_manager to manage tasks in a to-do list. Each task will have a title, description, priority, and status.
 
 ## Attributes:
 * tasks: A list of dictionaries, where each dictionary represents a task with the following keys:
