@@ -20,7 +20,7 @@ Create a class called Task_manager to manage tasks in a to-do list. Each task wi
   * Marks the specified task as "Complete".
 * view_tasks(sort_by="priority"):
   * Displays all tasks in a formatted way.
-  * Allows sorting by priority or status.
+  * Allows sorting by priority or status, default is priority.
 * search_task(title):
   * Searches for a task by title and displays its details.
 
