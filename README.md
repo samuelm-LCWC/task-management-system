@@ -27,31 +27,31 @@ Create a class called Task_manager to manage tasks in a to-do list. Each task wi
 
 ## Examples
 ```
-manager = TaskManager()
+manager = Task_manager()
 
 manager.add_task("Buy groceries", "Milk, eggs, bread", 2)
 manager.add_task("Clean room", "Tidy up and vacuum", 3)
-manager.add_task("Finish project", "Complete Python assignment", 1)
+manager.add_task("Finish Project", "Complete Python assignment", 1)
 
-manager.view_tasks()
-➞ 
-1 Finish project (Priority: 1, Status: Incomplete)
-2. Buy groceries (Priority: 2, Status: Incomplete)
-3. Clean room (Priority: 3, Status: Incomplete)
+print(manager.view_tasks())
+# [{'title': 'Finish Project', 'description': 'Complete Python assignment', 'priority': 1, 'status': 'Incomplete'}, {'title': 'Buy groceries', 'description': 'Milk, eggs, bread', 'priority': 2, 'status': 'Incomplete'}, {'title': 'Clean room', 'description': 'Tidy up and vacuum', 'priority': 3, 'status': 'Incomplete'}]   
 
-manager.mark_complete("Buy groceries")
-manager.view_tasks()
- ➞ 
- 1. Finish project (Priority: 1, Status: Incomplete)
- 2. Buy groceries (Priority: 2, Status: Complete)
- 3. Clean room (Priority: 3, Status: Incomplete)
+manager.mark_complete("Buy Groceries")
+print(manager.view_tasks())
+# [{'title': 'Finish Project', 'description': 'Complete Python assignment', 'priority': 1, 'status': 'Incomplete'}, {'title': 'Buy groceries', 'description': 'Milk, eggs, bread', 'priority': 2, 'status': 'Incomplete'}, {'title': 'Clean room', 'description': 'Tidy up and vacuum', 'priority': 3, 'status': 'Incomplete'}]
 
-manager.search_task("Clean room")
- ➞ {"title": "Clean room", "description": "Tidy up and vacuum", "priority": 3, "status": "Incomplete"}
+print(manager.search_tasks("Clean room"))
+
+# Title: Clean room
+# Description: Tidy up and vacuum
+# Priority: 3
+# Status: Incomplete
 
 manager.remove_task("Clean room")
-manager.view_tasks()
- ➞ 
- 1. Finish project (Priority: 1, Status: Incomplete)
- 2. Buy groceries (Priority: 2, Status: Complete)
+
+print(manager.view_tasks())
+# [{'title': 'Finish Project', 'description': 'Complete Python assignment', 'priority': 1, 'status': 'Incomplete'}, {'title': 'Buy groceries', 'description': 'Milk, eggs, bread', 'priority': 2, 'status': 'Incomplete'}]
+
+print(manager.search_tasks("Clean room"))
+# No task found with title Clean room
 ```
